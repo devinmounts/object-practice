@@ -36,11 +36,14 @@ $(document).ready(function(){
     $("#listOfItems").append("<li><span class='listItems'>" + newItem.toDoItem + "</span><img src=\"img/complete.png\" class=\"complete\"></li>")
     $("#toDoItem").val("");
 
-    $(".listItems").last().click(function() {
-      //$(this).find(".complete").toggle();
-      // $(".complete").toggle();
+    $(".listItems").last().one("click", function() {
       $(this).parent().children(".complete").toggle();
     });
+    $(".complete").one("click", function() {
+      $(this).parent().children(".listItems").addClass("strikethrough")
+      $(this).toggle();
+    });
+
 
   });
 
