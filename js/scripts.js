@@ -29,6 +29,7 @@ $(document).ready(function(){
       $(".place").text(newLocation.place);
       $(".date").text(newLocation.date);
       $(".landmark").text(newLocation.landmark);
+      $(".half").addClass("col-md-6");
     });
     $("input#new-place").val("");
     $("input#new-date").val("");
