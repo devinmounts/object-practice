@@ -4,8 +4,14 @@ function Travel(place, date, landmark){
   this.landmark =landmark;
 }
 
-function Item(items) {
-  this.toDoItem = items;
+function Item(what, where, when) {
+  this.what = what;
+  this.where = where;
+  this.when = when;
+}
+
+Item.prototype.toDoInfo = function() {
+  return this.what + " at " + this.where + " by " + this.when;
 }
 
 $(document).ready(function(){
@@ -31,20 +37,23 @@ $(document).ready(function(){
 
   $("#item-list").submit(function(event) {
     event.preventDefault();
-    var inputtedItem = $("#toDoItem").val();
-    var newItem = new Item(inputtedItem);
-    $("#listOfItems").append("<li><span class='listItems'>" + newItem.toDoItem + "</span><img src=\"img/complete.png\" class=\"complete\"></li>")
-    $("#toDoItem").val("");
+    var inputtedWhat = $("#whatItem").val();
+    var inputtedWhere = $("#whereItem").val();
+    var inputtedWhen = $("#whenItem").val();
+    var newItem = new Item(inputtedWhat, inputtedWhere, inputtedWhen);
+    $("#listOfItems").append("<li class=\"liItem\"><span class='listItems'>" + newItem.toDoInfo() + "</span><img src=\"img/complete.png\" class=\"complete\"></li>")
 
-    $(".listItems").last().one("click", function() {
+    $("input#whatItem").val("");
+    $("input#whereItem").val("");
+    $("input#whenItem").val("");
+
+    $(".listItems").last().click(function() {
       $(this).parent().children(".complete").toggle();
     });
-    $(".complete").one("click", function() {
-      $(this).parent().children(".listItems").addClass("strikethrough")
+    $(".complete").last().click(function() {
+      $(this).parent().children(".listItems").toggleClass("strikethrough")
       $(this).toggle();
+      $(this).toggleClass("complete")
     });
-
-
   });
-
 });

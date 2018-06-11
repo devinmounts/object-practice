@@ -24,7 +24,7 @@
               </div>
               <div class="form-group">
                 <label for="new-date">Date of Visit</label>
-                <input type="text" class="form-control" id="new-date" required>
+                <input type="date" class="form-control" id="new-date" required>
               </div>
               <div class="form-group">
                 <label for="new-landmark">What did I see?</label>
@@ -54,7 +54,9 @@
         <form id="item-list">
           <label for="toDoItem">Enter an item to do:</label>
           <div class="form-inline">
-            <input type="text" class="form-control" id="toDoItem">
+            <input type="text" class="form-control" id="whatItem" placeholder="What">
+            <input type="text" class="form-control" id="whereItem" placeholder="Where">
+            <input type="date" class="form-control" id="whenItem" placeholder="When">
             <button type="submit" class="btn form-control btn-success">Add another item</button>
           </div>
         </form>

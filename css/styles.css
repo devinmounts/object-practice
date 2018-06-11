@@ -4,12 +4,12 @@
 
 .locationResult {
   display: none;
-  overflow: scroll;
+  overflow: auto;
   height: 150px;
 }
 
 .travel {
-  height: 500px;
+  min-height: 520px;
   width: 100%;
 }
 
@@ -25,4 +25,11 @@
 
 .strikethrough{
   text-decoration: line-through;
+  color: forest;
+  text-decoration-color: red;
+}
+
+.liItem {
+  display: flex;
+  align-items: center;
 }
