@@ -13,7 +13,16 @@
   width: 100%;
 }
 
+.listItems {
+  font-size: 2em;
+}
+
 .complete {
-  height: 13px;
-  width: 13px;
+  height: 23px;
+  width: 23px;
+  display:none;
+}
+
+.strikethrough{
+  text-decoration: line-through;
 }

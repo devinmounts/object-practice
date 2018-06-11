@@ -33,12 +33,15 @@ $(document).ready(function(){
     event.preventDefault();
     var inputtedItem = $("#toDoItem").val();
     var newItem = new Item(inputtedItem);
-    $("#listOfItems").append("<li><span class='listItems'>" + newItem.toDoItem + "</span></li>")
+    $("#listOfItems").append("<li><span class='listItems'>" + newItem.toDoItem + "</span><img src=\"img/complete.png\" class=\"complete\"></li>")
     $("#toDoItem").val("");
 
-    $(".listItems").last().click(function(){
-      $(".listItems")this.append("<img src=\"img/complete.png\" class=\"complete\">");
+    $(".listItems").last().click(function() {
+      //$(this).find(".complete").toggle();
+      // $(".complete").toggle();
+      $(this).parent().children(".complete").toggle();
     });
+
   });
 
 });
