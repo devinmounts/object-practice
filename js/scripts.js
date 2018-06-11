@@ -22,7 +22,7 @@ $(document).ready(function(){
     var inputtedLandmark = $("input#new-landmark").val();
     var newLocation = new Travel(inputtedPlace, inputtedDate, inputtedLandmark);
     $(".locationResult").show();
-    $("#trips").append("<li><span class='trip'>" + newLocation.place + "</span></li>")
+    $("#trips").append("<li><span class='trip cursor'>" + newLocation.place + "</span></li>")
     $(".trip").last().click(function(){
       $("#show-trips").show();
       $("#show.trips h2").text(newLocation.place);
