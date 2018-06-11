@@ -42,7 +42,7 @@ $(document).ready(function(){
     var inputtedWhere = $("#whereItem").val();
     var inputtedWhen = $("#whenItem").val();
     var newItem = new Item(inputtedWhat, inputtedWhere, inputtedWhen);
-    $("#listOfItems").append("<li class=\"liItem\"><span class='listItems'>" + newItem.toDoInfo() + "</span><img src=\"img/complete.png\" class=\"complete\"></li>")
+    $("#listOfItems").append("<li class=\"liItem\"><span class='listItems cursor'>" + newItem.toDoInfo() + "</span><img src=\"img/complete.png\" class=\"complete cursor\"></li>")
 
     $("input#whatItem").val("");
     $("input#whereItem").val("");
@@ -54,7 +54,8 @@ $(document).ready(function(){
     $(".complete").last().click(function() {
       $(this).parent().children(".listItems").toggleClass("strikethrough")
       $(this).toggle();
-      $(this).toggleClass("complete")
+      $(this).toggleClass("complete");
+      $(this).parent().children(".listItems").removeClass("cursor");
     });
   });
 });

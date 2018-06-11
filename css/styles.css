@@ -17,6 +17,11 @@
   font-size: 2em;
 }
 
+#show-trips {
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
 .complete {
   height: 23px;
   width: 23px;
@@ -37,4 +42,8 @@
 
 body {
   background-image: url("../img/arches.png");
+}
+
+.cursor {
+  cursor: pointer;
 }
