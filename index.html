@@ -12,40 +12,55 @@
   </head>
   <body>
     <div class="container">
-      <h1>Travel Log</h1>
-      <div class="row">
-        <div class="col-md-6">
-          <h2>Add a Location:</h2>
-          <form id="new-location">
-            <div class="form-group">
-              <label for="new-location">Place</label>
-              <input type="text" class="form-control" id="new-place">
+      <div class="travel">
+        <h1>Travel Log</h1>
+        <div class="row">
+          <div class="col-md-6">
+            <h2>Add a Location:</h2>
+            <form id="new-location">
+              <div class="form-group">
+                <label for="new-location">Place</label>
+                <input type="text" class="form-control" id="new-place" required>
+              </div>
+              <div class="form-group">
+                <label for="new-date">Date of Visit</label>
+                <input type="text" class="form-control" id="new-date" required>
+              </div>
+              <div class="form-group">
+                <label for="new-landmark">What did I see?</label>
+                <input type="text" class="form-control" id="new-landmark" required>
+              </div>
+
+              <button type="submit" class="btn btn-success">Add</button>
+            </form>
+            <div class="locationResult">
+              <h2>Travel History:</h2>
+              <ul id="trips">
+              </ul>
             </div>
-            <div class="form-group">
-              <label for="new-date">Date of Visit</label>
-              <input type="text" class="form-control" id="new-date">
-            </div>
-            <div class="form-group">
-              <label for="new-landmark">What did I see?</label>
-              <input type="text" class="form-control" id="new-landmark">
-            </div>
-
-            <button type="submit" class="btn">Add</button>
-          </form>
-
-          <h2>Travel History:</h2>
-          <ul id="trips">
-
-          </ul>
-        </div>
-        <div class="col-md-6">
-          <div id="show-trips">
-            <h2></h2>
-
-            <p>First name: <span class="place"></span></p>
-            <p>First name: <span class="date"></span></p>
-            <p>Last name: <span class="landmark"></span></p>
           </div>
+          <div class="col-md-6">
+            <div id="show-trips">
+              <h2></h2>
+              <p>Location: <span class="place"></span></p>
+              <p>Date: <span class="date"></span></p>
+              <p>Landmark: <span class="landmark"></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="toDo">
+        <h1>To Do List</h1>
+        <form id="item-list">
+          <label for="toDoItem">Enter an item to do:</label>
+          <div class="form-inline">
+            <input type="text" class="form-control" id="toDoItem">
+            <button type="submit" class="btn form-control btn-success">Add another item</button>
+          </div>
+        </form>
+        <div class="show-items">
+          <ul id="listOfItems">
+          </ul>
         </div>
       </div>
     </div>

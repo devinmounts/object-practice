@@ -1,0 +1,19 @@
+#show-trips {
+  display: none;
+}
+
+.locationResult {
+  display: none;
+  overflow: scroll;
+  height: 150px;
+}
+
+.travel {
+  height: 500px;
+  width: 100%;
+}
+
+.complete {
+  height: 13px;
+  width: 13px;
+}
